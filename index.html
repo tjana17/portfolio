@@ -35,6 +35,34 @@
 			border-radius: 30px;
 			padding: 3px;
 		}
+		.filter-chip {
+		  	border: none;
+			padding: 8px 16px;
+			border-radius: 20px;
+			font-size: 1.7rem;
+			font-weight: 500;
+			cursor: pointer;
+			transition: all 0.3s;
+			margin: 0.3rem;
+			line-height: 1.4rem;
+			align-items: center;
+			gap: 6px;
+			opacity: 0.7;
+			letter-spacing: 0;
+			font-family: "lora-regular", serif;
+			text-transform: capitalize;
+			height: 3.3rem;
+		}
+
+		.filter-chip.active {
+		  	background: var(--primary);
+		  	color: white;
+		  	opacity: 1;
+		}
+
+		.filter-chip:not(.active) {
+		  	background: #f3f4f6;
+		}
 	</style>
 
 </head>
@@ -131,10 +159,49 @@
 
    	<div class="row about-content">
 
-   		<div class="col-six tab-full">
+   		<div class="col-twelve tab-full">
 
    			<h3>Profile</h3>
    			<p>I always try to make myself more efficient and compatible with my team members, this also gives me an extra edge to apply my knowledge wherever possible. I’m passionate about developing readable, clean, maintainable source code and delivering a quality product.</p>
+
+   			<h3>Skills</h3>
+   			<p>
+   				<button class="filter-chip">Project Management</button>
+   				<button class="filter-chip">App Architecture</button>
+   				<button class="filter-chip">Swift</button>
+   				<button class="filter-chip">SwiftUI</button>
+   				<button class="filter-chip">Objective-C</button>
+   				<button class="filter-chip">UIKit</button>
+   				<button class="filter-chip">Java</button>
+   				<button class="filter-chip">Kotlin</button>
+   				<button class="filter-chip">Javascript</button>
+   				<button class="filter-chip">HTML5</button>
+   				<button class="filter-chip">CSS3</button>
+   				<button class="filter-chip">Xcode</button>
+   				<button class="filter-chip">Android</button>
+   				<button class="filter-chip">Firebase Storage</button>
+   				<button class="filter-chip">Firebase Database</button>
+   				<button class="filter-chip">Firebase Crashlytics</button>
+   				<button class="filter-chip">Google Analytics</button>
+   				<button class="filter-chip">Source Control(Git)/Bitbucket</button>
+   				<button class="filter-chip">SQLite</button>
+   				<button class="filter-chip">MySQL</button>
+   				<button class="filter-chip">REST APIs / JSON</button>
+   				<button class="filter-chip">UnitTesting</button>
+   				<button class="filter-chip">Debugging</button>
+   				<button class="filter-chip">Core Data</button>
+   				<button class="filter-chip">Cocoa Touch</button>
+   				<button class="filter-chip">TestFlight</button>
+   				<button class="filter-chip">In-App Purchase</button>
+   				<button class="filter-chip">PushNotifications(APNS)</button>
+   				<button class="filter-chip">Adobe Photoshop CC</button>
+   				<button class="filter-chip">Adobe Illustrator CC</button>
+
+   			</p>
+
+   		</div>
+
+   		<div class="col-six tab-full"> 
 
    			<ul class="info-list">
    				<li>
@@ -146,53 +213,28 @@
    					<span>December 17, 1990</span>
    				</li>
    				<li>
-   					<strong>Job:</strong>
+   					<strong>Job Title:</strong>
    					<span>Sr.  Mobile Application Developer</span>
    					<span>Frontend developer</span>
+   				</li>
+   				<li>
+   					<strong>Email:</strong>
+   					<a href="mailto:tjana17@gmail.com"><span>tjana17@gmail.com</span></a>
    				</li>
    				<li>
    					<strong>Website:</strong>
    					<span>https://tjana17.github.io/portfolio/</span>
    				</li>
    				<li>
-   					<strong>Email:</strong>
-   					<span>tjana17@gmail.com</span>
+   					<strong>Github-Repo:</strong>
+   					<a href="https://github.com/tjana17?tab=repositories" target="_blank"><span>https://github.com/tjana17?tab=repositories</span></a>
    				</li>
+   				
 
    			</ul> <!-- /info-list -->
-
    		</div>
 
    		<div class="col-six tab-full">
-
-   			<h3>Skills</h3>
-   			<p>
-   				<span class="badge">Swift</span>
-   				<span class="badge">SwiftUI</span>
-   				<span class="badge">Objective-C</span>
-   				<span class="badge">Java</span>
-   				<span class="badge">Kotlin</span>
-   				<span class="badge">Javascript</span>
-   				<span class="badge">HTML5</span>
-   				<span class="badge">CSS3</span>
-   				<span class="badge">Xcode</span>
-   				<span class="badge">Android</span>
-   				<span class="badge">Firebase</span>
-   				<span class="badge">Source Control(Git)/Bitbucket</span>
-   				<span class="badge">SQLite</span>
-   				<span class="badge">MySQL</span>
-   				<span class="badge">Google Analytics</span>
-   				<span class="badge">UnitTesting</span>
-   				<span class="badge">Core Data</span>
-   				<span class="badge">Cocoa Touch</span>
-   				<span class="badge">PushNotifications(APNS)</span>
-   				<span class="badge">Adobe Photoshop CC</span>
-   				<span class="badge">Adobe Illustrator CC</span>
-
-   			</p>
-   			<!-- 
-   			, SwiftUI, Objective-C, Java, Javascript, HTML5, CSS3, Xcode, Android, Firebase, Source Control(Git)/Bitbucket, SQLite, MySQL, Google Analytics, Unit Testing, Core Data, Cocoa Touch, Push Notifications(APNS), Adobe Photoshop CC, Adobe Illustrator CC -->
-
 				<ul class="skill-bars">
 				   <li>
 				   	<div class="progress percent85"><span>88%</span></div>
@@ -266,6 +308,32 @@
    		<div class="col-twelve">
 
    			<div class="timeline-wrap">
+
+   				
+   				<div class="timeline-block">
+
+	   				<div class="timeline-ico">
+	   					<i class="fa fa-briefcase"></i>
+	   				</div>
+
+	   				<div class="timeline-header">
+	   					<h3>Senior iOS Developer</h3>
+	   					<p>Aug 2024 - Present</p>
+	   				</div>
+
+	   				<div class="timeline-content">
+	   					<h4>Cognetik Labs</h4>
+	   					<p>
+	   						<ul>
+	   							<li>Working on the client project as CaddyTrack AI, this app helps to the players for AI Assistant.</li>
+	   							<li>Practicing Golf smarter with AI.</li>
+	   							<li>Easy to use interface and comprehensive features ensure that you have everything you need to improve your game.</li>
+	   						
+	   						</ul>
+	   					</p>
+	   				</div>
+
+	   			</div> <!-- /timeline-block -->
 
    				<div class="timeline-block">
 
@@ -519,7 +587,23 @@
 
 	         	<div class="bgrid folio-item">
 	               <div class="item-wrap">
-	               	<img src="images/portfolio/myoja.jpg" alt="Store2K">
+	               	<img src="images/portfolio/caddytrack.jpg" alt="caddyTrack">
+	                  <a href="#modal-001" class="overlay">	                  	           
+	                     <div class="folio-item-table">
+	                     	<div class="folio-item-cell">
+		     					       <h3 class="folio-title">CaddyTrack AI</h3>	     					    
+		     					    	 <span class="folio-types">
+		     					       	  AI Assistant for Golf Game.
+		     					       </span>
+		     					   </div>	                      	
+	                     </div>                    
+	                  </a>
+	               </div>	               
+	        		</div> <!-- /folio-item -->
+
+	         	<div class="bgrid folio-item">
+	               <div class="item-wrap">
+	               	<img src="images/portfolio/myoja.jpg" alt="MYOJA">
 	                  <a href="#modal-01" class="overlay">	                  	           
 	                     <div class="folio-item-table">
 	                     	<div class="folio-item-cell">
@@ -695,6 +779,44 @@
 
 	            <!-- modal popups - begin
 	            ============================================================= -->
+	            <div id="modal-001" class="popup-modal slider mfp-hide">	
+
+				     	<div class="media">
+				     		<img src="images/portfolio/caddytrack.jpg" alt="" />
+				     	</div>      	
+
+					   <div class="description-box">
+					      <h4>CaddyTrack AI</h4>		      
+					      <p>Elevate Your Golf Game with CaddyTrack
+
+								CaddyTrack is your ultimate golf companion, designed to help golfers of all levels enhance their skills and enjoy the game more. Whether you're a beginner looking for guidance or an experienced golfer aiming to fine-tune your swing, CaddyTrack has the tools you need.
+
+								<strong>Features:</strong>
+								<ul>
+								<li><u>Voice-Assisted Coaching:</u> Utilize our voice assistant feature to receive club recommendations and shot advice as if you had a professional caddy by your side.</li>
+
+								<li><u>Personalized Feedback:</u> Get instant feedback based on reference swings. Adjust your stance and swing technique to match the optimal performance standards.</li>
+
+								<li><u>Swing Consistency Scoring:</u> Track your progress with our unique swing consistency scoring system. Receive scores based on the precision of your swings and work towards perfecting your technique.</li>
+
+								<li><u>Comprehensive Club and View Options:</u> Select from a variety of clubs and views to get the most accurate analysis of your swings.</li>
+
+								<li><u>Detailed Metrics Visualization:</u> Our intuitive BarView and AngleView charts display your performance metrics clearly, helping you identify areas for improvement.</li>
+
+								<li><u>Advanced Metrics Upload:</u> Easily upload and store your swing and session metrics in the cloud. Access detailed analysis and track your progress over time.</li>
+							</ul>
+						</p>
+
+					      <div class="categories">iOS Application</div>			               
+					   </div>
+
+			         <div class="link-box">
+			            <a href="https://apps.apple.com/in/app/myoja/id6451094009" class="popup-modal-dismiss" target="_blank">Details</a>
+					      <a href="#" class="popup-modal-dismiss">Close</a>
+			         </div>		      
+
+				   </div> <!-- /modal-001 -->
+
 	            <div id="modal-01" class="popup-modal slider mfp-hide">	
 
 				     	<div class="media">
