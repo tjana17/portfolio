@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Projects</title>
+  <style>
+.app-store-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  background-color: #000;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.app-store-btn:hover {
+  background-color: #333;
+}
+
+.app-store-btn .app-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.app-store-btn span {
+  line-height: 1.2;
+}
+
+.app-store-btn strong {
+  font-size: 16px;
+}
+</style>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      margin: 0;
+      background: #0f172a;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 16px;
+      cursor: pointer;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.5);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #cbd5e1;
+    }
+
+    /* Modal Overlay */
+    /*.modal {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.75);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+      animation: fadeIn 0.4s;
+      overflow-y: auto;
+      padding: 20px;
+    }
+
+    
+    .modal-content {
+      background: #1e293b;
+      padding: 30px;
+      border-radius: 16px;
+      width: 100%;
+      max-width: 700px;
+      position: relative;
+      animation: slideUp 0.4s ease;
+      margin-top: 15%;
+    }
+
+    .modal-content h2 {
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    .modal-content p {
+      color: #cbd5e1;
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    .modal-content img {
+      width: 40%;
+      border-radius: 12px;
+      margin-bottom: 16px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+    }
+
+    .modal-content .links a {
+      display: inline-block;
+      margin-right: 12px;
+      padding: 8px 14px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #fff;
+      background: #3b82f6;
+      transition: background 0.3s;
+    }
+
+    .modal-content .links a:hover {
+      background: #2563eb;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      font-size: 24px;
+      cursor: pointer;
+      color: #fff;
+      transition: transform 0.2s;
+    }
+
+    .close-btn:hover {
+      transform: scale(1.2);
+      color: #f87171;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes slideUp {
+      from {transform: translateY(30px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }*/
+    .modal {
+  position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.75);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+      animation: fadeIn 0.4s;
+      overflow-y: auto;
+      padding: 20px;
+}
+
+.modal-content {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.modal-image img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.modal-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.modal-text h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.modal-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.modal-highlights {
+  margin-top: 25px;
+}
+
+.modal-highlights h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.modal-highlights ul {
+  list-style: none;
+  padding: 0;
+}
+
+.modal-highlights li {
+  margin-bottom: 12px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* ✅ Responsive Styles */
+@media (max-width: 768px) {
+  .modal-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .modal-text {
+    margin-top: 15px;
+  }
+
+  .modal-highlights {
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal {
+    padding: 15px;
+  }
+
+  .modal-text h2 {
+    font-size: 20px;
+  }
+
+  .modal-text p,
+  .modal-highlights li {
+    font-size: 14px;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <a href="https://apps.apple.com/app/idYOUR_APP_ID" target="_blank" class="app-store-btn">
+  <img src="apple-logo.png" alt="Apple logo" class="app-icon">
+  <span>Available on<br><strong>App Store</strong></span>
+</a>
+
+
+  <div class="grid">
+    <div class="card" onclick="openModal(0)">
+      <img src="project1-thumb.jpg" alt="Project 1">
+      <h3>iOS App – Task Manager</h3>
+      <p>SwiftUI, Core Data, Firebase</p>
+    </div>
+
+    <div class="card" onclick="openModal(1)">
+      <img src="project2-thumb.jpg" alt="Project 2">
+      <h3>Connected Car App</h3>
+      <p>Swift, UIKit, Bluetooth</p>
+    </div>
+
+    <div class="card" onclick="openModal(2)">
+      <img src="project3-thumb.jpg" alt="Project 3">
+      <h3>E-Commerce App</h3>
+      <p>Swift, MVVM, REST APIs</p>
+    </div>
+  </div>
+
+  <!-- Single Reusable Modal -->
+  <div class="modal" id="projectModal">
+    <div class="modal-content">
+      <!-- Left: Image -->
+    <div class="modal-image">
+      <img id="modalImage" src="" alt="CaddyTrack AI screenshot">
+    </div>
+    <!-- Right: Title + Description -->
+    <div class="modal-text">
+      <h2 id="modalTitle"></h2>
+      <p id="modalDescription"></p>
+    </div>
+  </div>
+
+  <!-- Bottom: Key Highlights -->
+  <div class="modal-highlights" id="modalHighlights"></div>
+      <!-- <span class="close-btn" onclick="closeModal()">&times;</span>
+      <img id="modalImage" src="" alt="Project Image">
+      <h2 id="modalTitle"></h2>
+      <p id="modalDescription"></p>
+      <p id="modalHighlights"></p> -->
+      <div class="links" id="modalLinks"></div>
+  </div>
+
+  <!-- App Store Button (dark & light variants) -->
+
+  <script>
+    // Project Data Array
+    const projects = [
+      {
+        title: "iOS App – Task Manager",
+        description: "A productivity app designed with SwiftUI, offline storage using Core Data, and Firebase cloud sync. Includes push notifications, authentication, and a minimal clean UI.",
+        highlights: `<p data-start="2880" data-end="3013">A utility app showcasing modern bottom sheet UI patterns, enabling intuitive interactions for quick actions and additional content.</p>
+<p data-start="3015" data-end="3036"><strong data-start="3015" data-end="3034">Key Highlights:</strong></p>
+<ul data-start="3037" data-end="3324">
+<li data-start="3037" data-end="3108">
+<p data-start="3039" data-end="3108">📱 <strong data-start="3042" data-end="3071">Modal &amp; Persistent Sheets</strong> &ndash; Support for different use cases.</p>
+</li>
+<li data-start="3109" data-end="3184">
+<p data-start="3111" data-end="3184">🎛️ <strong data-start="3115" data-end="3139">Interactive Controls</strong> &ndash; Buttons, forms, and lists inside sheets.</p>
+</li>
+<li data-start="3185" data-end="3252">
+<p data-start="3187" data-end="3252">🔄 <strong data-start="3190" data-end="3209">Gesture Support</strong> &ndash; Drag up, down, or dismiss with swipes.</p>
+</li>
+<li data-start="3253" data-end="3324">
+<p data-start="3255" data-end="3324">🎨 <strong data-start="3258" data-end="3282">Customizable Layouts</strong> &ndash; Flexible styling to match app themes.</p>
+</li>
+</ul>`,
+        image: "./assets/images/projects/uitalents_web.jpg",
+        links: [
+          { label: "GitHub", url: "https://github.com/yourname/taskmanager" },
+          { label: "Live Demo", url: "https://yourapp.com/demo" }
+        ]
+      },
+      {
+        title: "Connected Car App",
+        description: "Developed an app for remote vehicle monitoring using Swift & UIKit. Features include real-time location tracking, geofencing alerts, and Bluetooth connectivity with on-board systems.",
+        highlights: `<p data-start="2880" data-end="3013">A utility app showcasing modern bottom sheet UI patterns, enabling intuitive interactions for quick actions and additional content.</p>
+<p data-start="3015" data-end="3036"><strong data-start="3015" data-end="3034">Key Highlights:</strong></p>
+<ul data-start="3037" data-end="3324">
+<li data-start="3037" data-end="3108">
+<p data-start="3039" data-end="3108">📱 <strong data-start="3042" data-end="3071">Modal &amp; Persistent Sheets</strong> &ndash; Support for different use cases.</p>
+</li>
+<li data-start="3109" data-end="3184">
+<p data-start="3111" data-end="3184">🎛️ <strong data-start="3115" data-end="3139">Interactive Controls</strong> &ndash; Buttons, forms, and lists inside sheets.</p>
+</li>
+<li data-start="3185" data-end="3252">
+<p data-start="3187" data-end="3252">🔄 <strong data-start="3190" data-end="3209">Gesture Support</strong> &ndash; Drag up, down, or dismiss with swipes.</p>
+</li>
+<li data-start="3253" data-end="3324">
+<p data-start="3255" data-end="3324">🎨 <strong data-start="3258" data-end="3282">Customizable Layouts</strong> &ndash; Flexible styling to match app themes.</p>
+</li>
+</ul>`,
+        image: "./assets/images/projects/uitalents_web.jpg",
+        links: [
+          { label: "GitHub", url: "https://github.com/yourname/carapp" }
+        ]
+      },
+      {
+        title: "E-Commerce App",
+        description: "A modern e-commerce platform app built with Swift and MVVM architecture. Integrated secure payments, product catalog, push notifications, and REST API-based backend services.",
+        highlights: `<p data-start="2880" data-end="3013">A utility app showcasing modern bottom sheet UI patterns, enabling intuitive interactions for quick actions and additional content.</p>
+<p data-start="3015" data-end="3036"><strong data-start="3015" data-end="3034">Key Highlights:</strong></p>
+<ul data-start="3037" data-end="3324">
+<li data-start="3037" data-end="3108">
+<p data-start="3039" data-end="3108">📱 <strong data-start="3042" data-end="3071">Modal &amp; Persistent Sheets</strong> &ndash; Support for different use cases.</p>
+</li>
+<li data-start="3109" data-end="3184">
+<p data-start="3111" data-end="3184">🎛️ <strong data-start="3115" data-end="3139">Interactive Controls</strong> &ndash; Buttons, forms, and lists inside sheets.</p>
+</li>
+<li data-start="3185" data-end="3252">
+<p data-start="3187" data-end="3252">🔄 <strong data-start="3190" data-end="3209">Gesture Support</strong> &ndash; Drag up, down, or dismiss with swipes.</p>
+</li>
+<li data-start="3253" data-end="3324">
+<p data-start="3255" data-end="3324">🎨 <strong data-start="3258" data-end="3282">Customizable Layouts</strong> &ndash; Flexible styling to match app themes.</p>
+</li>
+</ul>`,
+        image: "./assets/images/projects/uitalents_web.jpg",
+        links: [
+          { label: "GitHub", url: "https://github.com/yourname/ecommerce" },
+          { label: "Live Demo", url: "https://yourshop.com/demo" }
+        ]
+      }
+    ];
+
+    function openModal(index) {
+      const project = projects[index];
+      document.getElementById("modalTitle").innerText = project.title;
+      document.getElementById("modalDescription").innerHTML = project.description;
+      document.getElementById("modalHighlights").innerHTML = project.highlights;
+      document.getElementById("modalImage").src = project.image;
+
+      // Clear and add links dynamically
+      const linksContainer = document.getElementById("modalLinks");
+      linksContainer.innerHTML = "";
+      project.links.forEach(link => {
+        const a = document.createElement("a");
+        a.href = link.url;
+        a.target = "_blank";
+        a.innerText = link.label;
+        linksContainer.appendChild(a);
+      });
+
+      document.getElementById("projectModal").style.display = "flex";
+    }
+
+    function closeModal() {
+      document.getElementById("projectModal").style.display = "none";
+    }
+
+    // Close when clicking outside
+    window.onclick = function(event) {
+      const modal = document.getElementById("projectModal");
+      if (event.target === modal) {
+        closeModal();
+      }
+    }
+  </script>
+
+</body>
+</html>
+
+<!-- 
+  1. New India Bazar
+  2. Store2K
+  3. QpaymentZ
+  4. Register Your Company
+  5. NovaPOS
+  6. UITalents
+-->
