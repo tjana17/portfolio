@@ -1006,7 +1006,7 @@
 
           <h3 class="h3 form-title shimmer-text">Contact Form</h3>
 
-          <form action="#" class="form" data-form>
+          <form action="https://formspree.io/f/xgvnwlnb" method="POST" class="form" data-form>
 
             <div class="input-wrapper">
               <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
@@ -1016,6 +1016,13 @@
 
             <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
 
+            <!-- Honeypot spam filter -->
+            <input type="text" name="_gotcha" style="display:none">
+
+            <!-- Redirect or confirmation message -->
+            <input type="hidden" name="_subject" value="New Portfolio Contact!">
+            <input type="hidden" name="_captcha" value="false">
+  
             <button class="form-btn" type="submit" disabled data-form-btn>
               <ion-icon name="paper-plane"></ion-icon>
               <span>Send Message</span>
