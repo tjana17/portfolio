@@ -134,26 +134,6 @@ for (let i = 0; i < formInputs.length; i++) {
   });
 }
  
-// Contact form Submission :- Success / error message
-const form = document.querySelector(".form");
-
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const formData = new FormData(form);
-
-    let response = await fetch(form.action, {
-      method: "POST",
-      body: formData,
-      headers: { 'Accept': 'application/json' }
-    });
-
-    if (response.ok) {
-      alert("✅ Thanks! Your message has been sent.");
-      form.reset();
-    } else {
-      alert("❌ Oops! Something went wrong, please try again.");
-    }
-  });
 
 
 
