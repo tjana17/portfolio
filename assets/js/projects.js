@@ -213,6 +213,23 @@ const projects = [
     ]
   },
   {
+    id: "jkportfolio",
+    title: "JK Portfolio",
+    category: "iOS Application",
+    description: `<p>A personal portfolio app showcasing apps and achievements, featuring Lottie & SwiftUI animations and built with MVVM architecture.</p>`,
+    keyfeatures: `<h3>✨ <strong>Key Features</strong></h3><br/>
+                      <ul>
+                        <li><p>🏗️ <strong>MVVM Architecture</strong>:<br/>Designed with clean architecture principles.</p></li>
+                        <li><p>🎨 <strong>SwiftUI & Lottie</strong>:<br/>Modern UI with engaging animations.</p></li>
+                        <li><p>📄 <strong>PDF Viewer</strong>:<br/>Integrated document viewing capabilities.</p></li>
+                        <li><p>📱 <strong>Swift 5 & Xcode 15</strong>:<br/>Built with the latest Apple technologies.</p></li>
+                      </ul>`,
+    image: "./assets/images/projects/jk_portfolio_web.jpg",
+    links: [
+      { label: "Learn More", url: "https://github.com/tjana17/JK-Portfolio" }
+    ]
+  },
+  {
     id: "clinicbooking",
     title: "Clinic Booking",
     category: "iOS Application",
