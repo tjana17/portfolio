@@ -70,7 +70,6 @@ li {
 a,
 button,
 img,
-ion-icon,
 span,
 time {
   display: block
@@ -560,6 +559,14 @@ main {
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden
+}
+
+.rating-wrapper {
+  display: flex;
+  gap: 5px;
+  color: var(--orange-yellow-crayola);
+  font-size: 14px;
+  margin-top: 10px;
 }
 
 .modal-container {
