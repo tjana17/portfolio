@@ -465,7 +465,7 @@ const projects = [
   },
   {
     id: "qpz",
-    title: "QPaymentZ",
+    title: "Q PaymentZ",
     category: "Web Development",
     description: "Web Development",
     keyfeatures: "",
@@ -494,6 +494,17 @@ const projects = [
     image: "./assets/images/projects/uitalents_web.jpg",
     links: [
       { label: "Learn More", url: "http://uitalents.com" }
+    ]
+  },
+  {
+    id: "qr-web",
+    title: "QR Generator - Web App",
+    category: "Web Development",
+    description: "Web Development",
+    keyfeatures: "",
+    image: "./assets/images/projects/qr_generator_web.png",
+    links: [
+      { label: "Learn More", url: "https://tjana17.github.io/qr-generator-web/" }
     ]
   }
 ];
