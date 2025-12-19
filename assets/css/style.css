@@ -1990,3 +1990,150 @@ textarea.form-input::-webkit-resizer {
   width: 100%;
   float: left
 }
+
+/* Blog Modal Specific Styles */
+
+.blog-modal-content {
+  padding: 30px;
+  max-width: 800px;
+}
+
+.blog-modal-header {
+  margin-bottom: 25px;
+}
+
+.modal-blog-img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: var(--shadow-2);
+  margin-bottom: 20px;
+}
+
+.blog-meta-modal {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: var(--fs-6);
+  color: var(--light-gray-70);
+}
+
+.blog-meta-modal .dot {
+  width: 4px;
+  height: 4px;
+  background: var(--light-gray-70);
+  border-radius: 50%;
+}
+
+.blog-author {
+  color: var(--orange-yellow-crayola);
+  font-weight: var(--fw-500);
+}
+
+.blog-modal-body {
+  color: var(--light-gray);
+  line-height: 1.8;
+  font-size: var(--fs-6);
+}
+
+.blog-content-full p {
+  margin-bottom: 15px;
+}
+
+.blog-content-full h4 {
+  color: var(--white-1);
+  font-size: var(--fs-4);
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-weight: var(--fw-600);
+}
+
+.blog-content-full strong {
+  font-weight: 700;
+}
+
+.blog-content-full ul li {
+  list-style-type: disc;
+}
+
+.blog-content-full ul {
+  margin-left: 5%;
+}
+
+@media (min-width: 768px) {
+  .blog-modal-content {
+    padding: 40px;
+  }
+}
+
+/* Code Block Styles */
+.code-block {
+  background: var(--eerie-black-1);
+  padding: 15px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: var(--fs-7);
+  color: var(--white-1);
+  border: 1px solid var(--jet);
+  margin-bottom: 20px;
+}
+
+.code-block code {
+  display: block;
+  white-space: pre;
+  margin-top: -20px;
+}
+
+.code-block code span {
+  display: inline-block;
+}
+
+/* Blockquote Styles */
+blockquote {
+  border-left: 4px solid var(--orange-yellow-crayola);
+  padding-left: 15px;
+  font-style: italic;
+  color: var(--light-gray);
+  margin: 20px 0;
+  background: var(--bg-gradient-jet);
+  padding: 15px;
+  border-radius: 0 8px 8px 0;
+}
+
+/* Xcode Syntax Highlighting */
+.swift-keyword {
+  color: #ff7ab2;
+  font-weight: bold;
+}
+
+/* Pink */
+.swift-type {
+  color: #6bdfff;
+}
+
+/* Cyan */
+.swift-string {
+  color: #ff8170;
+}
+
+/* Orange */
+.swift-func {
+  color: #a288d9;
+}
+
+/* Purple */
+.swift-property {
+  color: #4eb2cc;
+}
+
+/* Teal-ish */
+.swift-comment {
+  color: #6c7986;
+  font-style: italic;
+}
+
+/* Gray */
