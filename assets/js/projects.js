@@ -213,6 +213,26 @@ const projects = [
     ]
   },
   {
+    id: "newyear2026",
+    title: "New Year 2026",
+    category: "iOS Application",
+    description: `<p>A visually rich New Year celebration app built with SwiftUI, featuring a countdown experience followed by realistic fireworks, floating 3D balloons, and neon glowing “Happy New Year 2026” text. The app combines SwiftUI animations with Core Animation particle systems (CAEmitterLayer) to deliver smooth, high-performance, festival-quality visuals — all using native iOS technologies. Perfect for splash screens, festive launches, greeting apps, or learning advanced SwiftUI animation techniques.</p>`,
+    keyfeatures: `<h3>✨ <strong>Key Features</strong></h3><br/>
+                      <ul>
+                      <li><p>⏱ <strong>Animated countdown</strong>:<br/>(10 → 1)</p></li>
+                        <li><p>� <strong>Realistic fireworks</strong>:<br/>Radial bursts, Glowing cores, Long spark trails</p></li>
+                        <li><p>🎈 <strong>3D-style floating balloons</strong></p></li>
+                        <li><p>🏷 <strong>“Happy New Year 2026”</strong>:<br/>Text attached to balloon strings</p></li>
+                        <li><p>🌑 <strong>Cinematic dark gradient background</strong></p></li>
+                        <li><p>� <strong>Bottom-to-top floating animation</strong></p></li>
+                        <li><p>⚡ <strong>High-performance & fully native</strong>:<br/>(no third-party libraries)</p></li>
+                      </ul>`,
+    image: "./assets/images/projects/new_year_2026.jpg",
+    links: [
+      { label: "Learn More", url: "https://github.com/tjana17/Happy-New-Year-2026" }
+    ]
+  },
+  {
     id: "jkportfolio",
     title: "JK Portfolio",
     category: "iOS Application",

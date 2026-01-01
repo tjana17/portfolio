@@ -1971,6 +1971,7 @@ textarea.form-input::-webkit-resizer {
 .shimmer-text:hover {
   background: linear-gradient(90deg, #fff, #999, #fff);
   background-size: 200% auto;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: shine 1s linear
