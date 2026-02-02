@@ -526,6 +526,17 @@ const projects = [
     links: [
       { label: "Learn More", url: "https://tjana17.github.io/qr-generator-web/" }
     ]
+  },
+  {
+    id: "expensify-web",
+    title: "Expensify - Web App",
+    category: "Web Development",
+    description: "Web Development",
+    keyfeatures: "",
+    image: "./assets/images/projects/expensify_web.png",
+    links: [
+      { label: "Learn More", url: "https://jk-expensify.infinityfree.me/" }
+    ]
   }
 ];
 
