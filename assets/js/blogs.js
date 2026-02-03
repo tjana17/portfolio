@@ -10,6 +10,16 @@ const blogs = [
         image: "./assets/images/blog-1.jpg",
         description: "Building an iOS app that scales, performs well, and remains maintainable for years is where real engineering begins.",
         contentUrl: "./assets/blogs/architect-scalable-ios-apps-using-swiftui-mvvm.html"
+    },
+    {
+        id: "ios-firebase",
+        title: "Firebase in iOS: Authentication, Firestore & Storage – Best Practices",
+        category: "iOS Development",
+        date: "Feb 03, 2026",
+        author: "Janarthanan Kannan",
+        image: "./assets/images/blog-1.jpg",
+        description: "Firebase is a powerful platform for building mobile and web applications. It provides a wide range of services that can be used to build a complete application without writing any backend code.",
+        contentUrl: "./assets/blogs/architect-scalable-ios-apps-using-swiftui-mvvm.html"
     }
     // ... existing items ...
 ];

@@ -1,0 +1,70 @@
+<h3>Introduction</h3>
+<p>Firebase is powerful - but <strong>misusing it can destroy performance and security.</strong><br /><br />
+    Having integrated Firebase in multiple production apps, here are my <strong>best practices for iOS
+        developers.</strong>
+</p>
+<hr />
+<br />
+<h3>1. Firebase Authentication</h3>
+<h4>Best Practices</h4>
+<ul>
+    <li>Always handle error states</li>
+    <li>Use email verification</li>
+    <li>Secure password reset flows</li>
+</ul>
+<pre class="code-block"><code>
+Auth.auth().signIn(withEmail: email, password: password)
+</code></pre>
+<hr /><br />
+<h3>2. Firestore – Database Design</h3>
+<h4>Rules I Follow</h4>
+<ul>
+    <li>Keep documents small</li>
+    <li>Avoid deeply nested collections</li>
+    <li>Use indexes properly</li>
+</ul><br />
+<h4>Bad Design</h4>
+<pre class="code-block"><code>
+users -> user -> expenses -> expense -> items
+</code></pre>
+<h4>Good Design</h4>
+<pre class="code-block"><code>
+expenses (flat collection)
+</code></pre>
+<hr /><br />
+<h3>3. Security Rules Are NOT Optional</h3>
+<p>Never rely only on client-side validation. <br />Example:</p>
+<pre class="code-block"><code>
+allow read, write: if request.auth != null;
+</code></pre>
+<hr /><br />
+<h3>4. Firebase Storage</h3>
+<h4>Best Practices</h4>
+<ul>
+    <li>Compress images before upload</li>
+    <li>Use background uploads</li>
+    <li>Store only URLs in Firestore</li>
+</ul><br />
+<hr /><br />
+<h3>5. Performance Optimization</h3>
+<ul>
+    <li>Enable offline persistence</li>
+    <li>Use pagination</li>
+    <li>Avoid real-time listeners everywhere</li>
+</ul><br />
+<hr /><br />
+<h4>Common Mistakes</h4>
+<ul>
+    <li>Hardcoding API keys</li>
+    <li>Large Firestore reads</li>
+    <li>No error handling</li>
+</ul><br />
+<hr /><br />
+<h3>Final Thoughts</h3>
+<p>Firebase is excellent <strong>when used correctly</strong>.</p>
+<blockquote>
+    <p><strong>Architecture + security = production readiness.</strong></p>
+</blockquote>
+<hr /><br />
+<p>📩 Need a production-ready Firebase iOS app?</p>
+<p>👉 <strong>Hire me as your Mobile Tech Lead</strong></p>
