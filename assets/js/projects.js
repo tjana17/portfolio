@@ -213,6 +213,25 @@ const projects = [
     ]
   },
   {
+    id: "expenseTracker",
+    title: "Expense Tracker",
+    category: "iOS Application",
+    description: `<p>A simple and secure personal finance app that helps users track daily expenses, manage categories, and store receipts, built using SwiftUI and Firebase with a focus on clean architecture and real-world backend integration.</p>`,
+    keyfeatures: `<h3>✨ <strong>Key Features</strong></h3><br/>
+                      <ul>
+                      <li><p>🔐 <strong>Firebase Authentication</strong><br/>Secure email-based user login to protect personal financial data.</p></li>
+                        <li><p>💸 <strong>Expense Management</strong>:<br/>Add, edit, delete, and categorize expenses with an intuitive workflow.</p></li>
+                        <li><p>📁 <strong>Receipt Storage (Firebase Storage)</strong><br/>Upload and securely store receipt images in the cloud for future reference.</p></li>
+                        <li><p>☁️ <strong>Cloud Sync</strong>:<br/>Real-time data synchronization across devices using Firebase backend services.</p></li>
+                        <li><p>🎨 <strong>SwiftUI Interface</strong><br/>Clean, responsive, and modern UI designed entirely with SwiftUI.</p></li>
+                        <li><p>🏗️ <strong>Clean Architecture</strong>:<br/>Structured codebase demonstrating scalable design and Firebase integration best practices.</p></li>
+                      </ul>`,
+    image: "./assets/images/projects/new_year_2026.jpg",
+    links: [
+      { label: "Learn More", url: "https://github.com/tjana17/Expense-Tracker" }
+    ]
+  },
+  {
     id: "newyear2026",
     title: "New Year 2026",
     category: "iOS Application",
