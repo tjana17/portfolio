@@ -17,9 +17,9 @@ const blogs = [
         category: "iOS Development",
         date: "Feb 03, 2026",
         author: "Janarthanan Kannan",
-        image: "./assets/images/blog-1.jpg",
+        image: "./assets/images/projects/firebase_signin_web.jpg",
         description: "Firebase is a powerful platform for building mobile and web applications. It provides a wide range of services that can be used to build a complete application without writing any backend code.",
-        contentUrl: "./assets/blogs/architect-scalable-ios-apps-using-swiftui-mvvm.html"
+        contentUrl: "./assets/blogs/firebase-in-ios-authentication-firestore-storage-best-practices.html"
     }
     // ... existing items ...
 ];
@@ -35,6 +35,8 @@ async function openBlogModal(blogId) {
     document.getElementById("modalBlogAuthor").innerText = "By " + blog.author;
     document.getElementById("modalBlogImage").src = blog.image;
     document.getElementById("modalBlogDescription").innerHTML = blog.description;
+    document.getElementById("modalBlogContent").innerHTML = "<p>Loading content...</p>";
+    document.getElementById("blogModal").style.display = "flex";
 
     // Fetch content if needed
     let content = blog.content;
@@ -55,7 +57,6 @@ async function openBlogModal(blogId) {
     }
 
     document.getElementById("modalBlogContent").innerHTML = content || "";
-    document.getElementById("blogModal").style.display = "flex";
 }
 
 // Close Blog Modal
@@ -64,18 +65,16 @@ function closeBlogModal() {
 }
 
 // Close when clicking outside
-window.onclick = function (event) {
-    const modal = document.getElementById("blogModal");
-    if (event.target === modal) {
+window.addEventListener("click", function (event) {
+    const blogModal = document.getElementById("blogModal");
+    const projectModal = document.getElementById("projectModal");
+
+    if (event.target === blogModal) {
         closeBlogModal();
-    } else {
-        // Also check for project modal since we're overriding window.onclick
-        const projectModal = document.getElementById("projectModal");
-        if (projectModal && event.target === projectModal) {
-            projectModal.style.display = "none";
-        }
+    } else if (event.target === projectModal) {
+        projectModal.style.display = "none";
     }
-}
+});
 
 // Render Blogs
 document.addEventListener("DOMContentLoaded", function () {
