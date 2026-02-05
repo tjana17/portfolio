@@ -226,7 +226,7 @@ const projects = [
                         <li><p>🎨 <strong>SwiftUI Interface</strong><br/>Clean, responsive, and modern UI designed entirely with SwiftUI.</p></li>
                         <li><p>🏗️ <strong>Clean Architecture</strong>:<br/>Structured codebase demonstrating scalable design and Firebase integration best practices.</p></li>
                       </ul>`,
-    image: "./assets/images/projects/new_year_2026.jpg",
+    image: "./assets/images/projects/expense_tracker.jpg",
     links: [
       { label: "Learn More", url: "https://github.com/tjana17/Expense-Tracker" }
     ]
