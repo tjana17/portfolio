@@ -232,6 +232,27 @@ const projects = [
     ]
   },
   {
+    id: "valentinesday2026",
+    title: "Valentine’s Day ❤️",
+    category: "iOS Application",
+    description: `<p>A visually immersive Valentine’s Day celebration app built with SwiftUI, featuring a romantic animated intro with a dynamic beating heart, interactive particle explosions, and soft floating love particles.<br/>
+The experience blends custom vector drawing, orchestrated animations, and GPU-optimized compositing to deliver smooth, high-performance visuals — all using native iOS technologies.<br/>
+Perfect for splash screens, themed event apps, romantic greeting experiences, or learning advanced SwiftUI animation systems.
+</p>`,
+    keyfeatures: `<h3>✨ <strong>Key Features</strong></h3><br/>
+                      <ul>
+                      <li><p>💓 <strong>Dynamic animated heart</strong>:<br/>Custom Shape with smooth morphing and organic pulse animation</p></li>
+                        <li><p>💥 <strong>Interactive particle explosion system</strong>:<br/>Radial burst animations with randomized motion physics</p></li>
+                        <li><p>💕 <strong>Floating love particle background</strong>:<br/>Soft ambient particles with continuous motion</p></li>
+                        <li><p>🌅 <strong>Cinematic glow effects</strong>:<br/>Layered radial gradients with realistic blend modes</p></li>
+                        <li><p>🎬 <strong>Orchestrated animation sequencing</strong>:<br/>Carefully tuned timing curves and staggered transitions</p></li>
+                      </ul>`,
+    image: "./assets/images/projects/valentines_day_2026.jpg",
+    links: [
+      { label: "Learn More", url: "https://github.com/tjana17/HappyValentinesDay" }
+    ]
+  },
+  {
     id: "newyear2026",
     title: "New Year 2026",
     category: "iOS Application",
