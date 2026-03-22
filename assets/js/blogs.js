@@ -1,3 +1,4 @@
+'use strict';
 
 // Blog Data Array
 const blogs = [
@@ -21,31 +22,40 @@ const blogs = [
         description: "Firebase is a powerful platform for building mobile and web applications. It provides a wide range of services that can be used to build a complete application without writing any backend code.",
         contentUrl: "./assets/blogs/firebase-in-ios-authentication-firestore-storage-best-practices.html"
     }
-    // ... existing items ...
 ];
 
 // Open Blog Modal
 async function openBlogModal(blogId) {
-    const blog = blogs.find(b => b.id === blogId);
+    const blog = blogs.find(function (b) { return b.id === blogId; });
     if (!blog) return;
 
-    document.getElementById("modalBlogTitle").innerText = blog.title;
-    document.getElementById("modalBlogDate").innerText = blog.date;
-    document.getElementById("modalBlogCategory").innerText = blog.category;
-    document.getElementById("modalBlogAuthor").innerText = "By " + blog.author;
-    document.getElementById("modalBlogImage").src = blog.image;
-    document.getElementById("modalBlogDescription").innerHTML = blog.description;
-    document.getElementById("modalBlogContent").innerHTML = "<p>Loading content...</p>";
-    document.getElementById("blogModal").style.display = "flex";
+    const titleEl = document.getElementById("modalBlogTitle");
+    const dateEl = document.getElementById("modalBlogDate");
+    const categoryEl = document.getElementById("modalBlogCategory");
+    const authorEl = document.getElementById("modalBlogAuthor");
+    const imageEl = document.getElementById("modalBlogImage");
+    const descEl = document.getElementById("modalBlogDescription");
+    const contentEl = document.getElementById("modalBlogContent");
+    const modalEl = document.getElementById("blogModal");
+
+    if (!titleEl || !contentEl || !modalEl) return;
+
+    titleEl.textContent = blog.title;
+    if (dateEl) dateEl.textContent = blog.date;
+    if (categoryEl) categoryEl.textContent = blog.category;
+    if (authorEl) authorEl.textContent = "By " + blog.author;
+    if (imageEl) imageEl.src = blog.image;
+    if (descEl) descEl.textContent = blog.description;
+    contentEl.innerHTML = "<p>Loading content...</p>";
+    modalEl.style.display = "flex";
 
     // Fetch content if needed
-    let content = blog.content;
+    var content = blog.content;
     if (blog.contentUrl && !content) {
         try {
-            const response = await fetch(blog.contentUrl);
+            var response = await fetch(blog.contentUrl);
             if (response.ok) {
                 content = await response.text();
-                // Cache it so we don't fetch again
                 blog.content = content;
             } else {
                 content = "<p>Error loading content.</p>";
@@ -56,52 +66,64 @@ async function openBlogModal(blogId) {
         }
     }
 
-    document.getElementById("modalBlogContent").innerHTML = content || "";
+    contentEl.innerHTML = typeof DOMPurify !== "undefined" ? DOMPurify.sanitize(content || "") : (content || "");
 }
 
 // Close Blog Modal
 function closeBlogModal() {
-    document.getElementById("blogModal").style.display = "none";
+    var modalEl = document.getElementById("blogModal");
+    if (modalEl) modalEl.style.display = "none";
 }
 
 // Close when clicking outside
 window.addEventListener("click", function (event) {
-    const blogModal = document.getElementById("blogModal");
-    const projectModal = document.getElementById("projectModal");
+    var blogModal = document.getElementById("blogModal");
+    var projectModal = document.getElementById("projectModal");
 
     if (event.target === blogModal) {
         closeBlogModal();
     } else if (event.target === projectModal) {
-        projectModal.style.display = "none";
+        closeModal();
     }
+});
+
+// Attach close button listener
+document.addEventListener("DOMContentLoaded", function () {
+    var closeBtn = document.getElementById("blogModalCloseBtn");
+    if (closeBtn) closeBtn.addEventListener("click", closeBlogModal);
 });
 
 // Render Blogs
 document.addEventListener("DOMContentLoaded", function () {
-    const blogListEl = document.getElementById("blog-posts-list");
+    var blogListEl = document.getElementById("blog-posts-list");
     if (!blogListEl) return;
 
-    blogs.forEach(blog => {
-        const li = document.createElement("li");
+    blogs.forEach(function (blog) {
+        var li = document.createElement("li");
         li.className = "blog-post-item";
 
-        li.innerHTML = `
-      <a href="#" onclick="openBlogModal('${blog.id}'); return false;">
-        <figure class="blog-banner-box">
-          <img src="${blog.image}" alt="${blog.title}" loading="lazy">
-        </figure>
-        <div class="blog-content">
-          <div class="blog-meta">
-            <p class="blog-category">${blog.category}</p>
-            <span class="dot"></span>
-            <time datetime="${new Date(blog.date).toISOString().split('T')[0]}">${blog.date}</time>
-          </div>
-          <h3 class="h3 blog-item-title">${blog.title}</h3>
-          <p class="blog-text">${blog.description}</p>
-        </div>
-      </a>
-    `;
+        var link = document.createElement("a");
+        link.href = "#";
+        link.addEventListener("click", function (e) {
+            e.preventDefault();
+            openBlogModal(blog.id);
+        });
 
+        link.innerHTML =
+            '<figure class="blog-banner-box">' +
+            '<img src="' + blog.image + '" alt="' + blog.title + '" loading="lazy">' +
+            '</figure>' +
+            '<div class="blog-content">' +
+            '<div class="blog-meta">' +
+            '<p class="blog-category">' + blog.category + '</p>' +
+            '<span class="dot"></span>' +
+            '<time datetime="' + new Date(blog.date).toISOString().split('T')[0] + '">' + blog.date + '</time>' +
+            '</div>' +
+            '<h3 class="h3 blog-item-title">' + blog.title + '</h3>' +
+            '<p class="blog-text">' + blog.description + '</p>' +
+            '</div>';
+
+        li.appendChild(link);
         blogListEl.appendChild(li);
     });
 });
