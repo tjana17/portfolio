@@ -1,3 +1,5 @@
+'use strict';
+
 // Skills data
 const skills = [
   { name: "Swift", level: 85 },
@@ -10,9 +12,10 @@ const skills = [
 ];
 
 const skillsContainer = document.getElementById("skills-container");
+if (!skillsContainer) { console.warn("Skills container not found"); }
 
 // Render skills dynamically
-skills.forEach((skill, index) => {
+if (skillsContainer) skills.forEach((skill, index) => {
   const li = document.createElement("li");
   li.classList.add("skills-item");
 
@@ -22,9 +25,9 @@ skills.forEach((skill, index) => {
       <data value="${skill.level}" class="skill-counter">0%</data>
     </div>
     <div class="skill-progress-bg">
-      <div class="skill-progress-fill" 
-           data-level="${skill.level}" 
-           data-delay="${index * 200}" 
+      <div class="skill-progress-fill"
+           data-level="${skill.level}"
+           data-delay="${index * 200}"
            data-animated="false">
       </div>
     </div>
@@ -33,44 +36,50 @@ skills.forEach((skill, index) => {
   skillsContainer.appendChild(li);
 });
 
-// Animate when in view with stagger + counter
-function animateSkills() {
-  const fills = document.querySelectorAll(".skill-progress-fill");
+// Animate skills using IntersectionObserver
+const skillsObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
 
-  fills.forEach(fill => {
-    const level = parseInt(fill.getAttribute("data-level"), 10);
-    const delay = parseInt(fill.getAttribute("data-delay"), 10);
-    const alreadyAnimated = fill.getAttribute("data-animated") === "true";
+      const fills = entry.target.querySelectorAll(".skill-progress-fill");
+      fills.forEach((fill) => {
+        if (fill.getAttribute("data-animated") === "true") return;
 
-    const rect = fill.getBoundingClientRect();
-    const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+        const level = parseInt(fill.getAttribute("data-level"), 10);
+        const delay = parseInt(fill.getAttribute("data-delay"), 10);
 
-    if (isVisible && !alreadyAnimated) {
-      fill.setAttribute("data-animated", "true"); // mark as done
+        fill.setAttribute("data-animated", "true");
 
-      setTimeout(() => {
-        // Animate bar fill
-        fill.style.width = level + "%";
+        setTimeout(() => {
+          fill.style.width = level + "%";
 
-        // Animate number counter
-        const counter = fill.parentElement.previousElementSibling.querySelector(".skill-counter");
-        let current = 0;
-        const duration = 1500; // match CSS transition (1.5s)
-        const steps = Math.ceil(duration / 30); // ~30 updates
-        const increment = level / steps;
+          const counter =
+            fill.parentElement.previousElementSibling.querySelector(
+              ".skill-counter"
+            );
+          let current = 0;
+          const duration = 1500;
+          const steps = Math.ceil(duration / 30);
+          const increment = level / steps;
 
-        const interval = setInterval(() => {
-          current += increment;
-          if (current >= level) {
-            current = level;
-            clearInterval(interval);
-          }
-          counter.textContent = Math.round(current) + "%";
-        }, 30);
-      }, delay); // stagger delay
-    }
-  });
+          const interval = setInterval(() => {
+            current += increment;
+            if (current >= level) {
+              current = level;
+              clearInterval(interval);
+            }
+            counter.textContent = Math.round(current) + "%";
+          }, 30);
+        }, delay);
+      });
+
+      skillsObserver.unobserve(entry.target);
+    });
+  },
+  { threshold: 0.2 }
+);
+
+if (skillsContainer) {
+  skillsObserver.observe(skillsContainer);
 }
-
-window.addEventListener("scroll", animateSkills);
-window.addEventListener("load", animateSkills);
