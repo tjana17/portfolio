@@ -14,7 +14,7 @@ const projects = [
                           <li><p>📍 <strong>Smart Course Insights</strong>:<br/>GPS-based guidance for distances, hazards, and green mapping.</p></li>
                           <li><p>⌚ <strong>Apple Watch Support</strong>:<br/>Quick access to shot data and guidance right from the wrist.</p></li>
                       </ul>`,
-    image: "./assets/images/projects/caddytrack.jpg",
+    image: "./assets/images/projects/caddytrack.webp",
     links: [
       { label: "App Store", url: "https://apps.apple.com/us/app/caddytrack-ai/id6502741813" }
     ]
@@ -33,7 +33,7 @@ const projects = [
                         <li><p>🗺 <strong>Geofencing</strong>:<br/>Define operating boundaries for better asset security.</p></li>
                         <li><p>🛠 <strong>Service History &amp; Dealer Locator</strong>:<br/>Maintain logs and quickly find authorized service providers.</p></li>
                       </ul>`,
-    image: "./assets/images/projects/myoja.jpg",
+    image: "./assets/images/projects/myoja.webp",
     links: [
       { label: "App Store", url: "https://apps.apple.com/in/app/myoja/id6451094009" }
     ]
@@ -52,7 +52,7 @@ const projects = [
                         <li><p>🆘 <strong>Emergency SOS Alerts</strong>:<br/>Built-in safety features for emergencies.</p></li>
                         <li><p>📊 <strong>Driving Stats &amp; History</strong>:<br/>Track trips, efficiency, and service reminders.</p></li>
                       </ul>`,
-    image: "./assets/images/projects/citroen.jpg",
+    image: "./assets/images/projects/citroen.webp",
     links: [
       { label: "App Store", url: "https://apps.apple.com/in/app/mycitroën-connect/id1613803195" }
     ]
@@ -71,7 +71,7 @@ const projects = [
                         <li><p>💰 <strong>Bet Tracking</strong>:<br/>Manage wagers seamlessly during games.</p></li>
                         <li><p>⌚ <strong>Apple Watch Integration</strong>:<br/>Track and input scores directly from the wrist.</p></li>
                       </ul>`,
-    image: "./assets/images/projects/beezer.jpg",
+    image: "./assets/images/projects/beezer.webp",
     links: [
       { label: "App Store", url: "https://apps.apple.com/us/app/beezer-golf-golf-scorecard/id1474924288" }
     ]
@@ -90,7 +90,7 @@ const projects = [
                         <li><p>👥 <strong>User Profiles</strong>:<br/>Manage orders, preferences, and saved items.</p></li>
                         <li><p>📊 <strong>Scalable Architecture</strong>:<br/>Built for performance, reliability, and future enhancements.</p></li>
                       </ul>`,
-    image: "./assets/images/projects/s2k.jpg",
+    image: "./assets/images/projects/s2k.webp",
     links: [
       { label: "Learn More", url: "https://store2k.com" }
     ]
@@ -107,7 +107,7 @@ const projects = [
                         <li><p>⭐ <strong>Personalized Recommendations</strong>:<br/>AI-driven suggestions based on interests and history.</p></li>
                         <li><p>📲 <strong>Social Sharing</strong>:<br/>Invite friends and share experiences instantly.</p></li>
                       </ul>`,
-    image: "./assets/images/projects/moonshine.jpg",
+    image: "./assets/images/projects/moonshine.webp",
     links: [
       { label: "App Store", url: "https://apps.apple.com/ae/app/moonshine-app-free-drinks/id1204223403" }
     ]
@@ -124,7 +124,7 @@ const projects = [
                         <li><p>💾 <strong>Favorites &amp; History</strong>:<br/>Save commonly visited places for quick access.</p></li>
                         <li><p>⚡ <strong>Lightweight &amp; Fast</strong>:<br/>Optimized for speed and reliability on the go.</p></li>
                       </ul>`,
-    image: "./assets/images/projects/mnf_n.jpg",
+    image: "./assets/images/projects/mnf_n.webp",
     links: [
       { label: "App Store", url: "https://apps.apple.com/ae/app/my-needfinder/id1335964038" }
     ]
@@ -141,7 +141,7 @@ const projects = [
                         <li><p>🕵️ <strong>Secure Checkout</strong>:<br/>Safe, seamless transactions for peace of mind.</p></li>
                         <li><p>🌍 <strong>Global Reach</strong>:<br/>Designed to support international clients and markets.</p></li>
                       </ul>`,
-    image: "./assets/images/projects/dhamani_n.jpg",
+    image: "./assets/images/projects/dhamani_n.webp",
     links: [
       { label: "App Store", url: "https://apps.apple.com/us/app/dhamani-1969/id1314238321" }
     ]
@@ -158,7 +158,7 @@ const projects = [
                         <li><p>🤝 <strong>Client Engagement</strong>:<br/>Tools to request services, proposals, and consultations.</p></li>
                         <li><p>📲 <strong>Professional Design</strong>:<br/>Streamlined UI reflecting a tech-driven brand identity.</p></li>
                       </ul>`,
-    image: "./assets/images/projects/cg1.jpg",
+    image: "./assets/images/projects/cg1.webp",
     links: [
       { label: "Learn More", url: "https://cyber-gear.ae" }
     ]
@@ -175,7 +175,7 @@ const projects = [
                         <li><p>📍 <strong>Interactive Map</strong>:<br/>Navigate the mall effortlessly.</p></li>
                         <li><p>🅿️ <strong>Parking Assistance</strong>:<br/>Find and remember parking spots.</p></li>
                       </ul>`,
-    image: "./assets/images/projects/sahara.jpg",
+    image: "./assets/images/projects/sahara.webp",
     links: [
       { label: "App Store", url: "https://apps.apple.com/us/app/sahara-centre/id961644035?ls=1" }
     ]
@@ -192,7 +192,7 @@ const projects = [
                         <li><p>📄 <strong>Medical Records</strong>:<br/>Secure access to patient history and reports.</p></li>
                         <li><p>📍 <strong>Hospital Navigation</strong>:<br/>Interactive maps for departments and services.</p></li>
                       </ul>`,
-    image: "./assets/images/projects/csh.jpg",
+    image: "./assets/images/projects/csh.webp",
     links: [
       { label: "App Store", url: "https://apps.apple.com/us/app/canadian-specialist-hospital/id1194470390" }
     ]
@@ -209,7 +209,7 @@ const projects = [
                         <li><p>🎉 <strong>Events Calendar</strong>:<br/>Stay updated on concerts, festivals, and exhibitions.</p></li>
                         <li><p>🚕 <strong>Travel &amp; Navigation</strong>:<br/>Integrated directions and booking links for convenience.</p></li>
                       </ul>`,
-    image: "./assets/images/projects/dcg.jpg",
+    image: "./assets/images/projects/dcg.webp",
     links: [
       { label: "Learn More", url: "https://www.dubaicityguide.com/" }
     ]
@@ -228,7 +228,7 @@ const projects = [
                         <li><p>🎨 <strong>SwiftUI Interface</strong><br/>Clean, responsive, and modern UI designed entirely with SwiftUI.</p></li>
                         <li><p>🏗️ <strong>Clean Architecture</strong>:<br/>Structured codebase demonstrating scalable design and Firebase integration best practices.</p></li>
                       </ul>`,
-    image: "./assets/images/projects/expense_tracker.jpg",
+    image: "./assets/images/projects/expense_tracker.webp",
     links: [
       { label: "Learn More", url: "https://github.com/tjana17/Expense-Tracker" }
     ]
@@ -249,7 +249,7 @@ Perfect for splash screens, themed event apps, romantic greeting experiences, or
                         <li><p>🌅 <strong>Cinematic glow effects</strong>:<br/>Layered radial gradients with realistic blend modes</p></li>
                         <li><p>🎬 <strong>Orchestrated animation sequencing</strong>:<br/>Carefully tuned timing curves and staggered transitions</p></li>
                       </ul>`,
-    image: "./assets/images/projects/valentines_day_2026.jpg",
+    image: "./assets/images/projects/valentines_day_2026.webp",
     links: [
       { label: "Learn More", url: "https://github.com/tjana17/HappyValentinesDay" }
     ]
@@ -269,7 +269,7 @@ Perfect for splash screens, themed event apps, romantic greeting experiences, or
                         <li><p>🎏 <strong>Bottom-to-top floating animation</strong></p></li>
                         <li><p>⚡ <strong>High-performance & fully native</strong>:<br/>(no third-party libraries)</p></li>
                       </ul>`,
-    image: "./assets/images/projects/new_year_2026.jpg",
+    image: "./assets/images/projects/new_year_2026.webp",
     links: [
       { label: "Learn More", url: "https://github.com/tjana17/Happy-New-Year-2026" }
     ]
@@ -286,7 +286,7 @@ Perfect for splash screens, themed event apps, romantic greeting experiences, or
                         <li><p>📄 <strong>PDF Viewer</strong>:<br/>Integrated document viewing capabilities.</p></li>
                         <li><p>📱 <strong>Swift 5 & Xcode 15</strong>:<br/>Built with the latest Apple technologies.</p></li>
                       </ul>`,
-    image: "./assets/images/projects/jk_portfolio_web.jpg",
+    image: "./assets/images/projects/jk_portfolio_web.webp",
     links: [
       { label: "Learn More", url: "https://github.com/tjana17/JK-Portfolio" }
     ]
@@ -303,7 +303,7 @@ Perfect for splash screens, themed event apps, romantic greeting experiences, or
                         <li><p>🔔 <strong >Reminders</strong>:<br/>Notifications for appointments.</p></li>
                         <li><p>📄 <strong>Patient Records</strong>:<br/>Track past visits.</p></li>
                       </ul>`,
-    image: "./assets/images/projects/clinic_booking_web.jpg",
+    image: "./assets/images/projects/clinic_booking_web.webp",
     links: [
       { label: "Learn More", url: "https://github.com/tjana17/ClinicBooking" }
     ]
@@ -320,7 +320,7 @@ Perfect for splash screens, themed event apps, romantic greeting experiences, or
                         <li><p>🌐 <strong>Multi-Source Integration</strong>:<br/>Diverse perspectives.</p></li>
                         <li><p>📲 <strong>Offline Mode</strong>:<br/>Save and read later.</p></li>
                       </ul>`,
-    image: "./assets/images/projects/news_app_web.jpg",
+    image: "./assets/images/projects/news_app_web.webp",
     links: [
       { label: "Learn More", url: "https://github.com/tjana17/News-App" }
     ]
@@ -337,7 +337,7 @@ Perfect for splash screens, themed event apps, romantic greeting experiences, or
                         <li><p>📍 <strong>Location Detection</strong>:<br/>Auto updates by GPS.</p></li>
                         <li><p>⏱️ <strong>Hourly Data</strong>:<br/>Precise short-term forecasts.</p></li>
                       </ul>`,
-    image: "./assets/images/projects/weather_web.jpg",
+    image: "./assets/images/projects/weather_web.webp",
     links: [
       { label: "Learn More", url: "https://github.com/tjana17/WeatherApp-SwiftUI" }
     ]
@@ -354,7 +354,7 @@ Perfect for splash screens, themed event apps, romantic greeting experiences, or
                         <li><p>📱 <strong>Minimal UI</strong>:<br/>Clean, focused design.</p></li>
                         <li><p>📈 <strong>Progress Tracking</strong>:<br/>Monitor over time.</p></li>
                       </ul>`,
-    image: "./assets/images/projects/bmi_calculator_web.jpg",
+    image: "./assets/images/projects/bmi_calculator_web.webp",
     links: [
       { label: "Learn More", url: "https://github.com/tjana17/BMI-Calculator" }
     ]
@@ -371,7 +371,7 @@ Perfect for splash screens, themed event apps, romantic greeting experiences, or
                         <li><p>💊 <strong>Medication Management</strong>:<br/>Dosage reminders.</p></li>
                         <li><p>📄 <strong>Records Access</strong>:<br/>Secure history and lab reports.</p></li>
                       </ul>`,
-    image: "./assets/images/projects/novitas_web.jpg",
+    image: "./assets/images/projects/novitas_web.webp",
     links: [
       { label: "Learn More", url: "https://github.com/tjana17/Novitas" }
     ]
@@ -386,7 +386,7 @@ Perfect for splash screens, themed event apps, romantic greeting experiences, or
                         <li><p>🍴 <strong>Restaurant Catalog</strong>:<br/>Browse menus with images and categories.</p></li>
                         <li><p>🔔 <strong>Smart Notifications</strong>:<br/>Updates on order confirmation and delivery.</p></li>
                       </ul>`,
-    image: "./assets/images/projects/food_ordering_web.jpg",
+    image: "./assets/images/projects/food_ordering_web.webp",
     links: [
       { label: "Learn More", url: "https://github.com/tjana17/FoodOrdering" }
     ]
@@ -403,7 +403,7 @@ Perfect for splash screens, themed event apps, romantic greeting experiences, or
                         <li><p>📱 <strong>Clean UI</strong>:<br/>Minimalist design for easy task management.</p></li>
                         <li><p>🎨 <strong>Custom Labels</strong>:<br/>Organize tasks by categories or priorities.</p></li>
                       </ul>`,
-    image: "./assets/images/projects/reminders_web.jpg",
+    image: "./assets/images/projects/reminders_web.webp",
     links: [
       { label: "Learn More", url: "https://github.com/tjana17/Reminders" }
     ]
@@ -419,7 +419,7 @@ Perfect for splash screens, themed event apps, romantic greeting experiences, or
                         <li><p>📂 <strong>Folders &amp; Tags</strong>:<br/>Organize notes for quick access.</p></li>
                         <li><p>🔍 <strong>Quick Search</strong>:<br/>Find notes instantly with keywords.</p></li>
                       </ul>`,
-    image: "./assets/images/projects/notes_app_web.jpg",
+    image: "./assets/images/projects/notes_app_web.webp",
     links: [
       { label: "Learn More", url: "https://github.com/tjana17/NotesApp" }
     ]
@@ -436,7 +436,7 @@ Perfect for splash screens, themed event apps, romantic greeting experiences, or
                         <li><p>📱 <strong>Seamless Integration</strong>:<br/>Easily added to existing apps.</p></li>
                         <li><p>⚡ <strong>Scalable</strong>:<br/>Built to handle large user bases.</p></li>
                       </ul>`,
-    image: "./assets/images/projects/firebase_signin_web.jpg",
+    image: "./assets/images/projects/firebase_signin_web.webp",
     links: [
       { label: "Learn More", url: "https://github.com/tjana17/FirebaseSignIn" }
     ]
@@ -453,7 +453,7 @@ Perfect for splash screens, themed event apps, romantic greeting experiences, or
                         <li><p>📖 <strong>Feature Highlights</strong>:<br/>Educates users about app value quickly.</p></li>
                         <li><p>🔄 <strong>Skippable Flow</strong>:<br/>Option to skip or revisit onboarding.</p></li>
                       </ul>`,
-    image: "./assets/images/projects/onboarding_web.jpg",
+    image: "./assets/images/projects/onboarding_web.webp",
     links: [
       { label: "Learn More", url: "https://github.com/tjana17/OnboardingScreens" }
     ]
@@ -470,7 +470,7 @@ Perfect for splash screens, themed event apps, romantic greeting experiences, or
                         <li><p>🎨 <strong>Customizable Styles</strong>:<br/>Colors, labels, legends, and tooltips.</p></li>
                         <li><p>⚡ <strong>Smooth Animations</strong>:<br/>Enhances data presentation.</p></li>
                       </ul>`,
-    image: "./assets/images/projects/charts_swiftui.jpg",
+    image: "./assets/images/projects/charts_swiftui.webp",
     links: [
       { label: "Learn More", url: "https://github.com/tjana17/Charts-SwiftUI" }
     ]
@@ -487,7 +487,7 @@ Perfect for splash screens, themed event apps, romantic greeting experiences, or
                         <li><p>🔄 <strong>Gesture Support</strong>:<br/>Drag up, down, or dismiss with swipes.</p></li>
                         <li><p>🎨 <strong>Customizable Layouts</strong>:<br/>Flexible styling to match app themes.</p></li>
                       </ul>`,
-    image: "./assets/images/projects/bottom_sheet_web.jpg",
+    image: "./assets/images/projects/bottom_sheet_web.webp",
     links: [
       { label: "Learn More", url: "https://github.com/tjana17/BottomSheetDropdown" }
     ]
@@ -504,7 +504,7 @@ Perfect for splash screens, themed event apps, romantic greeting experiences, or
                         <li><p>📊 <strong>Analytics Dashboard</strong>:<br/>Sales reports and business insights.</p></li>
                         <li><p>👥 <strong>Customer Management</strong>:<br/>Profiles, purchase history, and loyalty tracking.</p></li>
                       </ul>`,
-    image: "./assets/images/projects/novapos_web.jpg",
+    image: "./assets/images/projects/novapos_web.webp",
     links: [
       { label: "Learn More", url: "https://novapos.ai" }
     ]
@@ -521,7 +521,7 @@ Perfect for splash screens, themed event apps, romantic greeting experiences, or
                         <li><p>🚚 <strong>Delivery Tracking</strong>:<br/>Real-time order status and delivery updates.</p></li>
                         <li><p>💳 <strong>Secure Payments</strong>:<br/>Multiple payment gateway integrations.</p></li>
                       </ul>`,
-    image: "./assets/images/projects/nib_web.jpg",
+    image: "./assets/images/projects/nib_web.webp",
     links: [
       { label: "Learn More", url: "https://newindiabazar.com" }
     ]
@@ -538,7 +538,7 @@ Perfect for splash screens, themed event apps, romantic greeting experiences, or
                         <li><p>🔔 <strong>Notifications</strong>:<br/>Alerts for deals, order updates, and promotions.</p></li>
                         <li><p>📱 <strong>Responsive Design</strong>:<br/>Optimized experience across all devices.</p></li>
                       </ul>`,
-    image: "./assets/images/projects/s2k_web.jpg",
+    image: "./assets/images/projects/s2k_web.webp",
     links: [
       { label: "Learn More", url: "https://store2k.com" }
     ]
@@ -555,7 +555,7 @@ Perfect for splash screens, themed event apps, romantic greeting experiences, or
                         <li><p>🔐 <strong>Multi-Factor Auth</strong>:<br/>Enhanced security for account access.</p></li>
                         <li><p>🌐 <strong>Multi-Currency Support</strong>:<br/>Process payments in various currencies.</p></li>
                       </ul>`,
-    image: "./assets/images/projects/qpz_web.jpg",
+    image: "./assets/images/projects/qpz_web.webp",
     links: [
       { label: "Learn More", url: "https://qpaymentz.com" }
     ]
@@ -572,7 +572,7 @@ Perfect for splash screens, themed event apps, romantic greeting experiences, or
                         <li><p>🔔 <strong>Status Tracking</strong>:<br/>Real-time updates on application progress.</p></li>
                         <li><p>💼 <strong>Business Packages</strong>:<br/>Tiered service plans for different needs.</p></li>
                       </ul>`,
-    image: "./assets/images/projects/registeryourcompany_web.jpg",
+    image: "./assets/images/projects/registeryourcompany_web.webp",
     links: [
       { label: "Learn More", url: "https://registeryourcompany.com" }
     ]
@@ -589,7 +589,7 @@ Perfect for splash screens, themed event apps, romantic greeting experiences, or
                         <li><p>💬 <strong>Direct Messaging</strong>:<br/>In-platform communication for collaboration.</p></li>
                         <li><p>⭐ <strong>Reviews &amp; Ratings</strong>:<br/>Build trust through verified feedback.</p></li>
                       </ul>`,
-    image: "./assets/images/projects/uitalents_web.jpg",
+    image: "./assets/images/projects/uitalents_web.webp",
     links: [
       { label: "Learn More", url: "https://uitalents.com" }
     ]
@@ -606,7 +606,7 @@ Perfect for splash screens, themed event apps, romantic greeting experiences, or
                         <li><p>📥 <strong>Download &amp; Share</strong>:<br/>Save QR codes as images for easy sharing.</p></li>
                         <li><p>⚡ <strong>No Server Required</strong>:<br/>Fully client-side for instant results.</p></li>
                       </ul>`,
-    image: "./assets/images/projects/qr_generator_web.png",
+    image: "./assets/images/projects/qr_generator_web.webp",
     links: [
       { label: "Learn More", url: "https://tjana17.github.io/qr-generator-web/" }
     ]
@@ -623,7 +623,7 @@ Perfect for splash screens, themed event apps, romantic greeting experiences, or
                         <li><p>📅 <strong>Monthly Budgets</strong>:<br/>Set and monitor budget limits.</p></li>
                         <li><p>📱 <strong>Responsive Design</strong>:<br/>Works seamlessly on mobile and desktop.</p></li>
                       </ul>`,
-    image: "./assets/images/projects/expensify_web.png",
+    image: "./assets/images/projects/expensify_web.webp",
     links: [
       { label: "Learn More", url: "https://jk-expensify.infinityfree.me/" }
     ]
