@@ -77,15 +77,34 @@ document.addEventListener("DOMContentLoaded", function () {
         openModal(project.id);
       });
 
-      link.innerHTML =
-        '<figure class="project-img">' +
-        '<div class="project-item-icon-box">' +
-        '<ion-icon name="eye-outline" aria-hidden="true"></ion-icon>' +
-        '</div>' +
-        '<img src="' + project.image + '" alt="' + project.title + '" loading="lazy">' +
-        '</figure>' +
-        '<h3 class="project-title shimmer-text">' + project.title + '</h3>' +
-        '<p class="project-category">' + project.category + '</p>';
+      var figure = document.createElement('figure');
+      figure.className = 'project-img';
+
+      var iconBox = document.createElement('div');
+      iconBox.className = 'project-item-icon-box';
+      iconBox.innerHTML = '<ion-icon name="eye-outline" aria-hidden="true"></ion-icon>';
+
+      var img = document.createElement('img');
+      img.alt = project.title;
+      img.loading = 'lazy';
+      img.addEventListener('load', function () { figure.classList.add('loaded'); });
+      img.addEventListener('error', function () { figure.classList.add('loaded'); });
+      img.src = project.image;
+
+      figure.appendChild(iconBox);
+      figure.appendChild(img);
+
+      var h3 = document.createElement('h3');
+      h3.className = 'project-title shimmer-text';
+      h3.textContent = project.title;
+
+      var p = document.createElement('p');
+      p.className = 'project-category';
+      p.textContent = project.category;
+
+      link.appendChild(figure);
+      link.appendChild(h3);
+      link.appendChild(p);
 
       li.appendChild(link);
       projectListEl.appendChild(li);
