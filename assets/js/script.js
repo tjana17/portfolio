@@ -97,6 +97,23 @@ formInputs.forEach(function (input) {
   });
 });
 
+// theme toggle
+const themeBtn = document.querySelector('[data-theme-btn]');
+if (themeBtn) {
+  themeBtn.addEventListener('click', function () {
+    const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+    document.body.classList.add('theme-transitioning');
+    if (isLight) {
+      document.documentElement.removeAttribute('data-theme');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+      localStorage.setItem('theme', 'light');
+    }
+    setTimeout(function () { document.body.classList.remove('theme-transitioning'); }, 320);
+  });
+}
+
 // page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
