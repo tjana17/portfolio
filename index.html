@@ -17,7 +17,7 @@
   <meta property="og:url" content="https://tjana17.github.io/portfolio/">
   <meta property="og:title" content="Janarthanan Kannan | Tech Lead &amp; Mobile Engineer Portfolio">
   <meta property="og:description"
-    content="Tech Lead & Mobile Engineer with 10+ years building iOS, Android, and web apps. Explore 15+ published projects.">
+    content="Tech Lead & Mobile Engineer with 10+ years building iOS, Android, and web apps. Explore 25+ published projects.">
   <meta property="og:image" content="https://tjana17.github.io/portfolio/assets/images/my-avatar.webp">
 
   <!-- Twitter -->
@@ -25,7 +25,7 @@
   <meta name="twitter:url" content="https://tjana17.github.io/portfolio/">
   <meta name="twitter:title" content="Janarthanan Kannan | Tech Lead &amp; Mobile Engineer Portfolio">
   <meta name="twitter:description"
-    content="Tech Lead & Mobile Engineer with 10+ years building iOS, Android, and web apps. Explore 15+ published projects.">
+    content="Tech Lead & Mobile Engineer with 10+ years building iOS, Android, and web apps. Explore 25+ published projects.">
   <meta name="twitter:image" content="https://tjana17.github.io/portfolio/assets/images/my-avatar.webp">
   <meta name="theme-color" content="#121212">
   <!--
@@ -56,6 +56,15 @@
     ],
     "knowsAbout": ["iOS Development", "Swift", "SwiftUI", "Android", "Web Development"]
   }
+  </script>
+
+  <!-- Theme init: runs before paint to prevent flash of wrong theme -->
+  <script>
+    (function () {
+      var saved = localStorage.getItem('theme');
+      var sys = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      if ((saved || sys) === 'light') document.documentElement.setAttribute('data-theme', 'light');
+    }());
   </script>
 
   <!--
@@ -245,27 +254,29 @@
 
         <section class="about-text">
           <p>
-            I’m Janarthanan Kannan, a passionate iOS Developer with over a decade of experience turning ideas into
-            elegant, user-friendly mobile apps. Over the years, I’ve built and launched 15+ iOS & Android applications
-            across fintech, e-commerce, automotive, and lifestyle domains — together reaching 100K+ downloads and even
-            earning App Store features.
+            With over a decade in mobile engineering, I’ve grown from shipping my first iOS app to leading teams that
+            build products used by hundreds of thousands of people. I’m Janarthanan Kannan — a Tech Lead &amp; Mobile
+            Engineer who believes great apps are built at the intersection of clean code, smart architecture, and a
+            relentless focus on user experience.
           </p>
 
           <p>
-            I specialize in Swift, SwiftUI, UIKit, and Core Data, Java & Kotlin, with a strong focus on clean
-            architecture (MVC/MVVM) and performance optimization. I love solving complex problems, mentoring teams, and
-            delivering apps that not only work flawlessly but also create delightful user experiences.
+            I’ve designed, built, and shipped 25+ iOS and Android applications across fintech, e-commerce, automotive,
+            and lifestyle — collectively earning 100K+ downloads and multiple App Store features. My craft spans Swift,
+            SwiftUI, UIKit, and Kotlin, grounded in scalable architecture patterns like MVC and MVVM, with a constant
+            eye on performance and long-term maintainability.
           </p>
 
           <p>
-            Beyond code, I believe in collaboration and continuous learning — qualities that have helped me grow from
-            building my first iOS app to leading teams and guiding products from concept to launch.
+            As a tech lead, I do more than write code — I align technical decisions with business goals, mentor
+            engineers, and drive Agile delivery across cross-functional teams. I take as much pride in building strong
+            teams as I do in building great products.
           </p>
 
           <p>
-            When I’m not coding, you’ll often find me exploring new technologies, tinkering with side projects, or
-            brainstorming the next big idea in mobile.
-
+            Outside of work, I’m exploring emerging mobile technologies, contributing to side projects, and mentoring
+            the next generation of mobile developers — because the best ideas often surface when curiosity leads the
+            way.
           </p>
 
           <div class="action-buttons">
@@ -297,7 +308,7 @@
               <div class="service-content-box">
                 <h4 class="h4 service-item-title shimmer-text">Mobile apps</h4>
 
-                <p class="service-item-text shimmer-text">
+                <p class="service-item-text">
                   Native iOS and Android app development using Swift, SwiftUI, Kotlin, and modern architectures.
                 </p>
               </div>
@@ -313,7 +324,7 @@
               <div class="service-content-box">
                 <h4 class="h4 service-item-title shimmer-text">Web Design</h4>
 
-                <p class="service-item-text shimmer-text">
+                <p class="service-item-text">
                   Responsive, accessible web interfaces built with modern front-end technologies and clean design
                   principles.
                 </p>
@@ -330,7 +341,7 @@
               <div class="service-content-box">
                 <h4 class="h4 service-item-title shimmer-text">Web Development</h4>
 
-                <p class="service-item-text shimmer-text">
+                <p class="service-item-text">
                   Full-stack web applications with scalable backends, RESTful APIs, and e-commerce platforms using
                   modern frameworks.
                 </p>
@@ -347,7 +358,7 @@
               <div class="service-content-box">
                 <h4 class="h4 service-item-title shimmer-text">Technical Leadership</h4>
 
-                <p class="service-item-text shimmer-text">
+                <p class="service-item-text">
                   Leading cross-functional teams, driving Agile delivery, mentoring developers, and aligning technical
                   strategy with business goals.
                 </p>
@@ -605,9 +616,8 @@
               <span>Jul 2008 — Jun 2011</span>
 
               <p class="timeline-text">
-                Yadava College,<br />
-                Madurai Kamraj University Board,<br />
-                Madurai, Tamil Nadu.
+                Yadava College, Madurai Kamraj University Board, Madurai, Tamil Nadu.<br />
+                Studied core computing principles, data structures, software engineering, and systems programming — the foundation of a 12+ year career in mobile and software development.
               </p>
 
             </li>
@@ -681,6 +691,7 @@
               <ul class="timeline-text">
                 <li>Independently architected and delivered iOS &amp; Android apps from concept to release.</li>
                 <li>Enhanced app security and UX with Core Data and advanced encryption.</li>
+                <li>Launched a cross-border e-commerce platform serving customers across the UAE and India, handling end-to-end delivery and post-launch support.</li>
               </ul>
 
             </li>
@@ -692,8 +703,9 @@
               <span>Jan 2015 — Oct 2017</span>
 
               <ul class="timeline-text">
-                <li>Built 10+ iOS &amp; Android apps (fintech, lifestyle, e-commerce).</li>
-                <li>Delivered secure payment integrations, in-app chat, and WatchOS apps.</li>
+                <li>Built 10+ iOS &amp; Android apps across fintech, lifestyle, and e-commerce verticals for enterprise clients.</li>
+                <li>Delivered secure payment integrations, in-app messaging, and Apple WatchOS companion apps.</li>
+                <li>Grew from mid-level engineer to senior contributor, taking ownership of full project delivery cycles and client communication.</li>
               </ul>
 
             </li>
@@ -706,9 +718,9 @@
               <span>Nov 2013 — Dec 2014</span>
 
               <ul class="timeline-text">
-                <li>Developed and maintained iOS applications using Objective-C and Xcode.</li>
-                <li>Collaborated with cross-functional teams to define and ship new features.</li>
-                <li>Integrated RESTful APIs and optimized app performance for seamless user experiences.</li>
+                <li>Developed and maintained iOS applications using Objective-C and Xcode for US-based clients.</li>
+                <li>Collaborated with cross-functional teams across time zones to define requirements and ship new features on schedule.</li>
+                <li>Integrated RESTful APIs, optimized app performance, and applied early Agile practices in a professional client-facing environment.</li>
               </ul>
 
             </li>
@@ -792,11 +804,11 @@
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Github Repos</button>
+              <button data-filter-btn>GitHub Repos</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Web development</button>
+              <button data-filter-btn>Web Development</button>
             </li>
 
           </ul>
@@ -825,11 +837,11 @@
               </li>
 
               <li class="select-item">
-                <button data-select-item>Github Repos</button>
+                <button data-select-item>GitHub Repos</button>
               </li>
 
               <li class="select-item">
-                <button data-select-item>Web development</button>
+                <button data-select-item>Web Development</button>
               </li>
 
             </ul>
@@ -938,7 +950,7 @@
 
         <section class="contact-form">
 
-          <h3 class="h3 form-title shimmer-text">Contact Form</h3>
+          <h3 class="h3 form-title shimmer-text">Get In Touch</h3>
 
           <form method="POST" class="form" data-form>
 
@@ -977,6 +989,12 @@
     </div>
 
   </main>
+
+  <!-- Theme toggle -->
+  <button class="theme-toggle" data-theme-btn aria-label="Toggle light/dark mode">
+    <ion-icon name="sunny-outline" class="icon-sun" aria-hidden="true"></ion-icon>
+    <ion-icon name="moon-outline" class="icon-moon" aria-hidden="true"></ion-icon>
+  </button>
 
 
 

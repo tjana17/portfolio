@@ -51,6 +51,104 @@
   --transition-2: 0.5s ease-in-out
 }
 
+/* ─── Light mode overrides ──────────────────────────────────────────────── */
+[data-theme="light"] {
+  --bg-gradient-onyx: linear-gradient(to bottom right,
+      hsl(220, 14%, 88%) 3%,
+      hsl(220, 10%, 94%) 97%);
+  --bg-gradient-jet: linear-gradient(to bottom right,
+      hsla(220, 14%, 88%, 0.35) 0%,
+      hsla(220, 10%, 93%, 0) 100%), hsl(0, 0%, 100%);
+  --bg-gradient-yellow-2: linear-gradient(135deg,
+      hsla(45, 100%, 71%, 0.15) 0%,
+      hsla(35, 100%, 68%, 0) 59.86%), hsl(0, 0%, 98%);
+  --border-gradient-onyx: linear-gradient(to bottom right,
+      hsl(220, 12%, 78%) 0%,
+      hsla(220, 12%, 78%, 0) 50%);
+  --jet:          hsl(220, 10%, 84%);
+  --onyx:         hsl(220, 12%, 88%);
+  --eerie-black-1: hsl(220, 14%, 97%);
+  --eerie-black-2: hsl(0, 0%, 100%);
+  --smoky-black:  hsl(220, 16%, 93%);
+  --white-1:      hsl(220, 15%, 12%);
+  --white-2:      hsl(220, 12%, 16%);
+  --light-gray:   hsl(220, 8%, 30%);
+  --light-gray-70: hsla(220, 8%, 30%, 0.7);
+  --orange-yellow-crayola: hsl(35, 90%, 38%);
+  --vegas-gold:   hsl(38, 65%, 34%);
+  --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.07);
+  --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.07);
+  --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.07);
+  --shadow-4: 0 25px 50px hsla(0, 0%, 0%, 0.05);
+  --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.07)
+}
+
+[data-theme="light"] ::selection {
+  color: hsl(0, 0%, 7%)
+}
+
+[data-theme="light"] .shimmer::before {
+  background: linear-gradient(120deg, transparent, rgba(0, 0, 0, .06), transparent)
+}
+
+[data-theme="light"] .shimmer-text {
+  color: var(--white-2)
+}
+
+[data-theme="light"] .shimmer-text:hover {
+  background: linear-gradient(90deg, #111, #555, #111);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent
+}
+
+[data-theme="light"] .navbar {
+  background: hsla(220, 14%, 92%, .82)
+}
+
+[data-theme="light"] .select-item button:hover {
+  background: hsl(220, 14%, 90%)
+}
+
+[data-theme="light"] .modal-content h2 {
+  color: var(--white-2)
+}
+
+[data-theme="light"] .modal-content p {
+  color: var(--light-gray)
+}
+
+[data-theme="light"] .close-btn {
+  color: var(--white-2)
+}
+
+[data-theme="light"] .mapbox iframe {
+  filter: grayscale(1)
+}
+
+[data-theme="light"] .project-img:not(.loaded) {
+  background: linear-gradient(90deg,
+    hsl(220, 14%, 94%) 25%,
+    hsl(220, 10%, 87%) 50%,
+    hsl(220, 14%, 94%) 75%
+  );
+  background-size: 200% 100%;
+  animation: img-shimmer 1.5s ease-in-out infinite
+}
+
+/* ─── Smooth theme transition ───────────────────────────────────────────── */
+.theme-transitioning,
+.theme-transitioning *,
+.theme-transitioning *::before,
+.theme-transitioning *::after {
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease !important
+}
+
 *,
 ::after,
 ::before {
@@ -422,7 +520,7 @@ main {
   left: 0;
   width: 100%;
   background: hsla(240, 1%, 17%, .75);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(14px);
   border: 1px solid var(--jet);
   border-radius: 12px 12px 0 0;
   box-shadow: var(--shadow-2);
@@ -2209,6 +2307,46 @@ blockquote {
   color: #6c7986;
   font-style: italic;
 }
+
+/* ─── Theme toggle button ───────────────────────────────────────────────── */
+.theme-toggle {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9999;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--eerie-black-1);
+  border: 1px solid var(--jet);
+  color: var(--orange-yellow-crayola);
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--shadow-2);
+  transition:
+    background var(--transition-1),
+    border-color var(--transition-1),
+    transform var(--transition-1),
+    box-shadow var(--transition-1)
+}
+
+.theme-toggle:hover {
+  transform: scale(1.12);
+  box-shadow: var(--shadow-3)
+}
+
+.theme-toggle:active {
+  transform: scale(0.95)
+}
+
+.theme-toggle .icon-moon { display: none }
+.theme-toggle .icon-sun  { display: block }
+
+[data-theme="light"] .theme-toggle .icon-moon { display: block }
+[data-theme="light"] .theme-toggle .icon-sun  { display: none }
 
 /* Screen reader only - visually hidden but accessible */
 .sr-only {
