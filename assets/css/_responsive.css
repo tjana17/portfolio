@@ -222,7 +222,7 @@
     width: 65px
   }
 
-  .modal-img-wrapper>img {
+  .testimonials-modal .modal-img-wrapper>img {
     display: block;
     flex-grow: 1;
     width: 35px
