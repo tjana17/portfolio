@@ -118,10 +118,21 @@ if (themeBtn) {
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
+// lazy-load Google Maps iframe only when Contact tab is first activated
+function loadMapIfNeeded(targetPage) {
+  if (targetPage === 'contact') {
+    const mapIframe = document.querySelector('[data-map-iframe]');
+    if (mapIframe && !mapIframe.src) {
+      mapIframe.src = mapIframe.dataset.src;
+    }
+  }
+}
+
 // add event to all nav link
 navigationLinks.forEach(function (link) {
   link.addEventListener("click", function () {
     const targetPage = this.dataset.navTarget || this.innerHTML.toLowerCase();
+    loadMapIfNeeded(targetPage);
 
     pages.forEach(function (page) {
       if (targetPage === page.dataset.page) {

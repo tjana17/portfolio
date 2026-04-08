@@ -17,7 +17,10 @@ function openModal(projectId) {
   if (titleEl) titleEl.textContent = project.title;
   if (descEl) descEl.innerHTML = DOMPurify.sanitize(project.description);
   if (featEl) featEl.innerHTML = DOMPurify.sanitize(project.keyfeatures);
-  if (imgEl) imgEl.src = project.image;
+  if (imgEl) {
+    imgEl.src = project.image;
+    imgEl.alt = project.title + ' project screenshot';
+  }
 
   if (linksEl) {
     linksEl.innerHTML = "";
