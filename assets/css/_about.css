@@ -236,7 +236,7 @@
   box-shadow: var(--shadow-2)
 }
 
-.modal-img-wrapper>img {
+.testimonials-modal .modal-img-wrapper>img {
   display: none
 }
 
