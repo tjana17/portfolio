@@ -17,7 +17,10 @@ function openModal(projectId) {
   if (titleEl) titleEl.textContent = project.title;
   if (descEl) descEl.innerHTML = DOMPurify.sanitize(project.description);
   if (featEl) featEl.innerHTML = DOMPurify.sanitize(project.keyfeatures);
-  if (imgEl) imgEl.src = project.image;
+  if (imgEl) {
+    imgEl.src = project.image;
+    imgEl.alt = project.title + ' project screenshot';
+  }
 
   if (linksEl) {
     linksEl.innerHTML = "";
@@ -51,6 +54,16 @@ document.addEventListener("DOMContentLoaded", function () {
     var projectListEl = document.getElementById("projectList");
     if (!projectListEl) {
       console.error("Project List Element not found!");
+      return;
+    }
+
+    // Guard: projects-data.js may have failed to load or define the array
+    if (typeof projects === "undefined" || !Array.isArray(projects)) {
+      console.error("Projects data unavailable — projects-data.js may have failed to load.");
+      projectListEl.innerHTML =
+        '<li style="color:var(--light-gray);padding:20px;text-align:center">' +
+        'Projects could not be loaded. Please try refreshing the page.' +
+        '</li>';
       return;
     }
 
