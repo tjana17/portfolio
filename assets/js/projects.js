@@ -57,6 +57,16 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
+    // Guard: projects-data.js may have failed to load or define the array
+    if (typeof projects === "undefined" || !Array.isArray(projects)) {
+      console.error("Projects data unavailable — projects-data.js may have failed to load.");
+      projectListEl.innerHTML =
+        '<li style="color:var(--light-gray);padding:20px;text-align:center">' +
+        'Projects could not be loaded. Please try refreshing the page.' +
+        '</li>';
+      return;
+    }
+
     // Render Projects Dynamically
     projects.forEach(function (project) {
       var li = document.createElement("li");
