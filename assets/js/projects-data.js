@@ -234,6 +234,23 @@ const projects = [
     ]
   },
   {
+    id: "stocktracker",
+    title: "Stock Tracker",
+    category: "iOS Application",
+    description: "<p>A comprehensive stock market tracking application that provides real-time market data, portfolio management, and financial insights to help investment decisions.</p>",
+    keyfeatures: `<h3>✨ <strong>Key Features</strong></h3><br/>
+                      <ul>
+                        <li><p>📈 <strong>Real-Time Data</strong>:<br/>Live stock prices and market updates.</p></li>
+                        <li><p>📊 <strong>Portfolio Tracking</strong>:<br/>Monitor investments and track performance over time.</p></li>
+                        <li><p>🔍 <strong>Stock Search &amp; Analysis</strong>:<br/>Detailed charts and financial metrics for individual stocks.</p></li>
+                        <li><p>🔔 <strong>Price Alerts</strong>:<br/>Custom notifications for price movements.</p></li>
+                      </ul>`,
+    image: "./assets/images/projects/stock_tracker.webp",
+    links: [
+      { label: "Learn More", url: "https://github.com/tjana17/StockTracker" }
+    ]
+  },
+  {
     id: "valentinesday2026",
     title: "Valentine’s Day ❤️",
     category: "iOS Application",
