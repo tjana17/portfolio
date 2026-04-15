@@ -21,6 +21,16 @@ const blogs = [
         image: "./assets/images/projects/firebase_signin_web.webp",
         description: "Firebase is a powerful platform for building mobile and web applications. It provides a wide range of services that can be used to build a complete application without writing any backend code.",
         contentUrl: "./assets/blogs/firebase-in-ios-authentication-firestore-storage-best-practices.html"
+    },
+    {
+        id: "ios-mistakes",
+        title: "Top 10 Common Mistakes iOS Developers Make (And How to Avoid Them)",
+        category: "iOS Development",
+        date: "Mar 14, 2026",
+        author: "Janarthanan",
+        image: "./assets/images/blog-2.png",
+        description: "Building iOS apps is exciting, but common mistakes can impact performance and maintainability. Learn how to avoid the top 10 pitfalls.",
+        contentUrl: "./assets/blogs/common-mistakes-ios-dev.html"
     }
 ];
 
