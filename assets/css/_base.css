@@ -213,8 +213,10 @@ main {
 /* ─── Theme toggle button ───────────────────────────────────────────────── */
 .theme-toggle {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
+  /* the navbar is fixed to the bottom below 1024px — sit clear of it so the
+     button never covers a nav item (see _responsive.css for the reset) */
+  bottom: calc(80px + env(safe-area-inset-bottom, 0px));
+  right: 20px;
   z-index: 9999;
   width: 46px;
   height: 46px;

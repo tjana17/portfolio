@@ -1,44 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Home / About -->
+  <!--
+    Single-page app: every tab (#about, #resume, #portfolio, #blog, #contact)
+    is a deep-linkable URL for visitors, but search engines normalise fragments
+    away, so only the canonical document is listed here.
+  -->
   <url>
     <loc>https://tjana17.github.io/portfolio/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-  </url>
-
-  <!-- Resume -->
-  <url>
-    <loc>https://tjana17.github.io/portfolio/#resume</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Portfolio -->
-  <url>
-    <loc>https://tjana17.github.io/portfolio/#portfolio</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Blog -->
-  <url>
-    <loc>https://tjana17.github.io/portfolio/#blog</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Contact -->
-  <url>
-    <loc>https://tjana17.github.io/portfolio/#contact</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
   </url>
 
 </urlset>

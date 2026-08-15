@@ -428,6 +428,12 @@
     box-shadow: none
   }
 
+  /* navbar has moved to the top, so the toggle can drop back to the corner */
+  .theme-toggle {
+    bottom: 30px;
+    right: 30px
+  }
+
   .navbar-list {
     gap: 30px;
     padding: 0 20px
