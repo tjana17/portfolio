@@ -23,7 +23,7 @@ const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
 const overlay = document.querySelector("[data-overlay]");
 
 // modal variable
-const modalImg = document.querySelector("[data-modal-img]");
+const modalAvatar = document.querySelector("[data-modal-avatar]");
 const modalTitle = document.querySelector("[data-modal-title]");
 const modalText = document.querySelector("[data-modal-text]");
 
@@ -40,9 +40,9 @@ testimonialsItem.forEach(function (item) {
     const title = this.querySelector("[data-testimonials-title]");
     const text = this.querySelector("[data-testimonials-text]");
 
-    if (modalImg && avatar) {
-      modalImg.src = avatar.src;
-      modalImg.alt = avatar.alt;
+    if (modalAvatar && avatar) {
+      modalAvatar.textContent = avatar.dataset.initials || "";
+      modalAvatar.setAttribute("aria-label", avatar.getAttribute("aria-label") || "Testimonial author");
     }
     if (modalTitle && title) {
       modalTitle.textContent = title.textContent;
@@ -128,29 +128,65 @@ function loadMapIfNeeded(targetPage) {
   }
 }
 
+// the page names that can appear in the URL, e.g. ["about", "resume", ...]
+const pageNames = Array.prototype.map.call(pages, function (page) {
+  return page.dataset.page;
+});
+
+// the page a nav control points at
+function targetOf(link) {
+  return (link.dataset.navTarget || link.textContent).trim().toLowerCase();
+}
+
+// read the page name out of the URL, falling back to the first page
+function pageFromHash() {
+  const name = decodeURIComponent(location.hash.replace(/^#/, "")).toLowerCase();
+  return pageNames.indexOf(name) !== -1 ? name : pageNames[0];
+}
+
+// show one page and sync the nav to match
+function activatePage(targetPage) {
+  loadMapIfNeeded(targetPage);
+
+  pages.forEach(function (page) {
+    page.classList.toggle("active", page.dataset.page === targetPage);
+  });
+
+  navigationLinks.forEach(function (navLink) {
+    const isCurrent = targetOf(navLink) === targetPage;
+    navLink.classList.toggle("active", isCurrent);
+    // only the real navbar entries describe "where you are"
+    if (navLink.closest(".navbar")) {
+      if (isCurrent) {
+        navLink.setAttribute("aria-current", "page");
+      } else {
+        navLink.removeAttribute("aria-current");
+      }
+    }
+  });
+}
+
 // add event to all nav link
 navigationLinks.forEach(function (link) {
   link.addEventListener("click", function () {
-    const targetPage = this.dataset.navTarget || this.innerHTML.toLowerCase();
-    loadMapIfNeeded(targetPage);
+    const targetPage = targetOf(this);
+    if (pageNames.indexOf(targetPage) === -1) return;
 
-    pages.forEach(function (page) {
-      if (targetPage === page.dataset.page) {
-        page.classList.add("active");
-      } else {
-        page.classList.remove("active");
-      }
-    });
+    activatePage(targetPage);
 
-    navigationLinks.forEach(function (navLink) {
-      const navTarget = navLink.dataset.navTarget || navLink.innerHTML.toLowerCase();
-      if (navTarget === targetPage) {
-        navLink.classList.add("active");
-      } else {
-        navLink.classList.remove("active");
-      }
-    });
+    // give every tab its own URL so it can be linked, bookmarked and gone back to
+    if (location.hash.replace(/^#/, "") !== targetPage) {
+      history.pushState({ page: targetPage }, "", "#" + targetPage);
+    }
 
     window.scrollTo(0, 0);
   });
 });
+
+// back/forward between tabs
+window.addEventListener("popstate", function () {
+  activatePage(pageFromHash());
+});
+
+// honour a deep link such as /#resume on first load
+if (location.hash) activatePage(pageFromHash());

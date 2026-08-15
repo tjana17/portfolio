@@ -115,6 +115,28 @@
   display: block;
 }
 
+/* Initial-based avatar used where no author photo is available */
+.avatar-monogram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 14px;
+  background: var(--bg-gradient-onyx);
+  color: var(--orange-yellow-crayola);
+  font-size: var(--fs-4);
+  font-weight: var(--fw-600);
+  letter-spacing: .5px;
+  user-select: none;
+}
+
+.avatar-monogram--lg {
+  width: 80px;
+  height: 80px;
+  font-size: var(--fs-2);
+}
+
 .testimonials-item-title {
   margin-bottom: 7px
 }
